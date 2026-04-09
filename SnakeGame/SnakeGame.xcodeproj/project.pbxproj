@@ -21,6 +21,9 @@
 		AA000000000000000000000C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000010C /* Constants.swift */; };
 		AA000000000000000000000D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000010D /* Assets.xcassets */; };
 		AA000000000000000000000E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000010E /* Preview Assets.xcassets */; };
+		AA000000000000000000000F /* FolderAccessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000110 /* FolderAccessManager.swift */; };
+		AA0000000000000000000010 /* FolderPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000111 /* FolderPickerView.swift */; };
+		AA0000000000000000000011 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000112 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		AA000000000000000000010D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA000000000000000000010E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AA000000000000000000010F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA0000000000000000000110 /* FolderAccessManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderAccessManager.swift; sourceTree = "<group>"; };
+		AA0000000000000000000111 /* FolderPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderPickerView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000112 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		AA0000000000000000000200 /* SnakeGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnakeGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -102,6 +108,8 @@
 				AA0000000000000000000108 /* StartScreenView.swift */,
 				AA0000000000000000000109 /* GameOverView.swift */,
 				AA000000000000000000010A /* ControlPadView.swift */,
+				AA0000000000000000000111 /* FolderPickerView.swift */,
+				AA0000000000000000000112 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -111,6 +119,7 @@
 			children = (
 				AA000000000000000000010B /* HapticManager.swift */,
 				AA000000000000000000010C /* Constants.swift */,
+				AA0000000000000000000110 /* FolderAccessManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -205,6 +214,9 @@
 				AA000000000000000000000A /* ControlPadView.swift in Sources */,
 				AA000000000000000000000B /* HapticManager.swift in Sources */,
 				AA000000000000000000000C /* Constants.swift in Sources */,
+				AA000000000000000000000F /* FolderAccessManager.swift in Sources */,
+				AA0000000000000000000010 /* FolderPickerView.swift in Sources */,
+				AA0000000000000000000011 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

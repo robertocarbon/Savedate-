@@ -115,6 +115,10 @@ class GameState: ObservableObject {
             highScore = score
             UserDefaults.standard.set(highScore, forKey: "snakeHighScore")
         }
+        let folderManager = FolderAccessManager.shared
+        if folderManager.hasAccess {
+            _ = folderManager.saveGameData(score: score, highScore: highScore)
+        }
     }
 
     private func spawnFood() {

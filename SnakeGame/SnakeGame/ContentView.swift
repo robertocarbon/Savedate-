@@ -2,6 +2,8 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var game = GameState()
+    @StateObject private var folderManager = FolderAccessManager.shared
+    @State private var showSettings = false
 
     var body: some View {
         GeometryReader { geo in
@@ -12,7 +14,20 @@ struct ContentView: View {
                     .ignoresSafeArea()
 
                 VStack(spacing: 12) {
-                    ScoreView(score: game.score, highScore: game.highScore)
+                    HStack {
+                        ScoreView(score: game.score, highScore: game.highScore)
+                        Button(action: {
+                            if game.gamePhase == .playing {
+                                game.pauseGame()
+                            }
+                            showSettings = true
+                        }) {
+                            Image(systemName: "gearshape.fill")
+                                .font(.title3)
+                                .foregroundColor(.gray)
+                                .padding(.trailing, 16)
+                        }
+                    }
 
                     GameBoardView(game: game, boardSize: boardSize)
 
@@ -38,5 +53,12 @@ struct ContentView: View {
             }
         }
         .statusBarHidden()
+        .fullScreenCover(isPresented: $showSettings, onDismiss: {
+            if game.gamePhase == .playing {
+                game.resumeGame()
+            }
+        }) {
+            SettingsView(folderManager: folderManager)
+        }
     }
 }
